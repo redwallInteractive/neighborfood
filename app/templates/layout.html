@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Foundation</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheets/app.css') }}">
+        <script src="bower_components/modernizr/modernizr.js"></script>
+    </head>
+    <body>
+    <!-- Begin Navigation -->
+    <div class="row">
+    <div class="large-12 columns">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+            <li class="name">
+              <h1><a href="#">Dinner Tonight</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+            <!-- Right Nav Section -->
+                <ul class="right">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/search/">Find Food</a></li>
+                  <li><a href="#">Cook Food</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+
+                <!-- Left Nav Section
+                <ul class="left">
+                  <li><a href="#">Left Nav Button</a></li>
+                </ul> -->
+            </section>
+          </nav>
+    </div>
+    </div>
+    <!-- End Navigation -->
+
+    {% block body %}{% endblock %}
+
+    <!-- Footer -->
+
+    <div class="row">
+    <small-12 class="columns">
+
+    </small-12>
+    </div>
+
+    <!-- Footer -->
+
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    </body>
+</html>

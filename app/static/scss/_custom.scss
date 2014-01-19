@@ -1,0 +1,40 @@
+.left-2ndcolumn{
+margin-left: rem-calc(20);
+}
+
+.left-small2ndcolumn{
+margin-left: 0px;
+margin-top: 0px;
+}
+
+
+.top-space{
+margin-top: rem-calc(20);
+}
+
+.top-small-space{
+margin-top: rem-calc(10);
+}
+
+
+.bottom-space{
+margin-bottom: rem-calc(20);
+}
+
+.bottom-small-space{
+margin-bottom: rem-calc(10);
+}
+
+
+.circle {
+  display: block;
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee; 
+  }

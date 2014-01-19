@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- Begin Main Content -->
+<div class="row">
+    <div class="small-12 columns">
+        <h2>{{ post.title }}</h2>
+    </div>
+</div>
+
+<div class="row bottom-space">
+    <div class="small-12 columns">
+        <div class="left"><div class="circle" style="background-image:url('images/cook.jpg')"></div></div>
+        <p class="left left-2ndcolumn">Laura</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <img src="images/dish1.jpg" alt="">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="small-12 columns">
+        <div class="panel">
+            <div class="row">
+
+                <div class="small-12 medium-6 large-6 columns">
+                    <h2>{{ post.price }}</h2>
+                    <p>Date Available: <strong>Sunday, Jan 4, 10pm</strong></p>
+                </div>
+
+                <div class="small-12 medium-6 large-6 columns">
+                    <form action="/cart/{{ post.id }}/" method=post>
+                        <div class="row">
+                            <div class="small-8 medium-8 large-4 columns">
+                                {{ form.csrf_token }}
+                                <label>Select Quantity</label>
+                                {{ form.plates }}
+
+                                <input type=submit value='Add to Cart'>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <h3>About this Dish</h3>
+        <p>{{ post.description }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <h3>About Laura</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, animi temporibus doloremque labore sequi magnam quibusdam. Porro, vel, repellendus, nemo sit qui velit ab itaque aspernatur debitis quos sint rerum quae architecto pariatur aliquid quam reiciendis expedita. Molestiae, velit, ea.</p>
+    </div>
+</div>
+
+<!-- End Main Content -->
+{% endblock %}

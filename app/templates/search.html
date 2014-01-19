@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!-- Begin Main Content -->
+
+<div class="row">
+    <div class="small-12 medium-6 large-6 columns">
+        <h2>Find Food</h2>
+    </div>
+
+    <div class="small-12 medium-6 large-6 columns top-small-space">
+        <form action="">
+            <div class="row">
+                <div class="small-12 medium-8 large-8 columns right">
+                    <select>
+                        <option value="Washington DC">Washington D.C.</option>
+                        <option value="San Francisco">San Francisco</option>
+                    </select>
+            </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+            {% for post in posts %}
+            <li>
+            <a href="#"><img class="th" src="images/search1.jpg" alt=""></a>
+            <h6><a href="food/{{ post.id }}/">{{ post.title }}</a></h6>
+            <p><strong>${{ post.price }}</strong><br/>{{ post.cuisine|safe }}</p>
+            </li>
+            {% else %}
+            <li><em>Unbelievable.  No entries here so far</em></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+  <!-- End Main Content -->
+
+{% endblock %}

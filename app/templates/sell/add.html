@@ -1,0 +1,24 @@
+{% if not session.logged_in %}
+    <li><a href="/login">Login or Signup</a></li>
+{% else %}
+    <form action="" method=post>
+        {{ form.csrf_token }}
+        <dl>
+        <dt>Title:
+        <dd>{{form.title(size=80)}}
+        <dt>Cuisine:
+        <dd>{{form.cuisine(size=80)}}
+        <dt>Description:
+        <dd>{{form.description(size=80)}}
+        <dt>Price/Plate:
+        <dd>{{form.price(size=80)}}
+        <dt>Plates Availble:
+        <dd>{{form.plates(size=80)}}
+        <dt>Locatiom:
+        <dd>{{form.location(size=80)}}
+        <dt>Date Availble:
+        <dd>{{form.date(size=80)}}
+        <dd><input type=submit value=Share>
+        </dl>
+    </form>
+{% endif %}
